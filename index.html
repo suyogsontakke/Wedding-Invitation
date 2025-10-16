@@ -16,6 +16,9 @@
             --gold-subtle: #D4AF37;
             --light-cream: #F0EAD6;
             --border-color: rgba(255, 215, 0, 0.4);
+            --primary-border-thickness: 2px; /* Increased border thickness for prominence */
+            --primary-border-radius: 12px;
+            --inner-padding: 30px; /* Consistent inner padding */
         }
 
         body {
@@ -38,7 +41,7 @@
 
         .texture-overlay {
             position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzUEWAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD02ODZlNjI3NzQyYzYxZTgzYjEzNzcwYmRkMWYyZTkyYyI/Pgo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MCA2MS4xMzQ3NzcsIDIwMTAvMDEvMTAtMTg6MTY6NDUgICAgICAgICI+CjxyZGY:UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5orgovMTk5OS8wMi8yMi1yZGYtc2NoZW1hL25zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vYmFzZS8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20vYmFzZS8xLjAvc3RFdnQjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2dcL2VsZW1lbnRzXC8xLjFcLyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6N0U0NzMzNzIzNzIwNjgxMTg1REQzMzQzNTM5OTY2MTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzUzNzA0RjU1RDBFMTExMTk0QjdDQ0M2RkMxMUE4MjkiIHhtcE1NOkRlcml2ZWRGcm9tPSJ4bXAuZGlkOjc1MzcwNEYzNUQwRTExMTE5NEI3Q0NDNkZDMzFBODI5IiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgeG1wOkNyZWF0b3JDb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1Ij4KICAgPHN0UmVmOmluc3RhbmNlSUQ+eG1wLmlpZDpGNDlBNjFDQzRFMDQxMTEyQzIzMUE5QjcwMjczNUM3Rjwvc3RSZWY6aW5zdGFuY2VJRD4KICAgPHN0UmVmOmRvY3VtZW50SUQ+eG1wLmRpZDozOEZERjQxQzQ3RkUxMTEyQzIzMUE5QjcwMjczNUM3Rjwvc3RSZWY6ZG9jdW1lbnRJRD4KICAgPHN0UmVmOm9yaWdpbmFsRG9jdW1lbnRJRD54bXAuZGlkOjc1MzcwNEYzNUQwRTExMTE5NEI3Q0NDNkZDMzFBODI5PC9zdFJlZjppbnN0YW5jZUlEPgogICA8c3RFdnQ6YWN0aW9uPkNyZWF0ZWQ8L3N0RXZ0OmFjdGlvbj4KICAgPHN0RXZ0Omllc3RhbmNlSUQ+eG1wLmlpZDpGNDlBNjFDQjRFMDQxMTEyQzIzMUE5QjcwMjczNUM3Rjwvc3RFdnQ6aW5zdGFuY2VJRD4KICAgPHN0RXZ0OndoZW4+MjAxMi0wMy0wNFQxMjowNDowNCswMTowMDwvc3RFdnQ6d2hlbj4KICAgPHN0RXZ0OnNvZnR3YXJlPkFkb2JlIFBob3Rvc2hvcCBDUzUuMSBVbmljb2RlIFdpdGhzIEV4dGVuZGVkPC9zdEV2dDpzb2Z0d2FyZT4KICAgPC9yZGY6RGVzY3JpcHRpb24+CjwvcmRmOlJERj4KPC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9InciPz4MvF2fAAAAGklEQVR42mJgYGDgZGBgYGYAAgwMDAwMDAAAJgAEI0QvUugAAAAASUVORK5CYII=') repeat;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzUEWAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD02ODZlNjI3NzQyYzYxZTgzYjEzNzcwYmRkMWYyZTkyYyI/Pgo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MCA2MS4xMzQ3NzcsIDIwMTAvMDEvMTAtMTg6MTY6NDUgICAgICAgICI+CjxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5orgovMTk5OS8wMi8yMi1yZGYtc2NoZW1hL25zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vYmFzZS8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20vYmFzZS8xLjAvc3RFdnQjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2dcL2VsZW1lbnRzXC8xLjFcLyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6N0U0NzMzNzIzNzIwNjgxMTg1REQzMzQzNTM5OTY2MTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzUzNzA0RjU1RDBFMTExMTk0QjdDQ0M2RkMxMUE4MjkiIHhtcE1NOkRlcml2ZWRGcm9tPSJ4bXAuZGlkOjc1MzcwNEYzNUQwRTExMTE5NEI3Q0NDNkZDMzFBODI5IiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgeG1wOkNyZWF0b3JDb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1Ij4KICAgPHN0UmVmOmluc3RhbmNlSUQ+eG1wLmlpZDpGNDlBNjFDQzRFMDQxMTEyQzIzMUE5QjcwMjczNUM3Rjwvc3RSZWY6aW5zdGFuY2VJRD4KICAgPHN0UmVmOmRvY3VtZW50SUQ+eG1wLmRpZDozOEZERjQxQzQ3RkUxMTEyQzIzMUE5QjcwMjczNUM3Rjwvc3RSZWY6ZG9jdW1lbnRJRD4KICAgPHN0UmVmOm9yaWdpbmFsRG9jdW1lbnRJRD54bXAuZGlkOjc1MzcwNEYzNUQwRTExMTE5NEI3Q0NDNkZDMzFBODI5PC9zdFJlZjppbnN0YW5jZUlEPgogICA8c3RFdnQ6YWN0aW9uPkNyZWF0ZWQ8L2N0RXZ0OmFjdGlvbj4KICAgPHN0RXZ0Omllc3RhbmNlSUQ+eG1wLmlpZDpGNDlBNjFDQjRFMDQxMTEyQzIzMUE5QjcwMjczNUM3Rjwvc3RFdnQ6aW5zdGFuY2VJRD4KICAgPHN0RXZ0OndoZW4+MjAxMi0wMy0wNFQxMjowNDowNCswMTowMDwvc3RFdnQ6d2hlbj4KICAgPHN0RXZ0OnNvZnR3YXJlPkFkb2JlIFBob3Rvc2hvcCBDUzUuMSBVbmljb2RlIFdpdGhzIEV4dGVuZGVkPC9zdEV2dDpzb2Z0d2FyZT4KICAgPC9yZGY6RGVzY3JpcHRpb24+CjwvcmRmOlJERj4KPC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9InciPz4MvF2fAAAAGklEQVR42mJgYGDgZGBgYGYAAgwMDAwMDAAAJgAEI0QvUugAAAAASUVORK5CYII=') repeat;
             opacity: 0.2; pointer-events: none;
         }
         
@@ -73,8 +76,9 @@
         .invitation-card {
             width: 100%; max-width: 620px; position: relative;
             background: linear-gradient(135deg, var(--bg-blue-dark), var(--bg-blue-light), var(--bg-blue-dark)); background-size: 400% 400%;
-            animation: shimmer-background 18s ease infinite; border-radius: 12px; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
-            padding: 30px 20px; box-sizing: border-box; text-align: center; overflow: hidden;
+            animation: shimmer-background 18s ease infinite; border-radius: var(--primary-border-radius); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+            padding: var(--inner-padding) 20px; /* Base padding for the card */
+            box-sizing: border-box; text-align: center; overflow: hidden;
             opacity: 0; pointer-events: none;
             max-height: calc(100vh - 40px); overflow-y: auto;
             scrollbar-width: none;
@@ -82,10 +86,20 @@
         .invitation-card::-webkit-scrollbar { display: none; }
         .invitation-card.visible { opacity: 1; pointer-events: auto; animation: card-enter 1s 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; }
         @keyframes card-enter { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
-        .invitation-card::before { content: ''; position: absolute; top: 10px; left: 10px; right: 10px; bottom: 10px; border: 1px solid var(--border-color); border-radius: 8px; pointer-events: none; }
+        
+        /* New internal border around the main content area */
+        .main-content-wrapper {
+            position: relative;
+            margin-top: 30px; /* Space from 'Fulzele Family' */
+            padding: 20px; /* Internal padding for content within the border */
+            border: var(--primary-border-thickness) solid var(--border-color);
+            border-radius: var(--primary-border-radius);
+            box-sizing: border-box;
+            background: rgba(0,0,0,0.05); /* Slight internal background for contrast */
+        }
         
         /* Cover Page Styles */
-        .cover-page { padding-bottom: 40px; }
+        .cover-page { padding-bottom: 20px; } /* Reduced padding as main-content-wrapper will have its own */
         .cover-page .top-left-emblem { font-family: 'Great Vibes', cursive; font-size: 3.5rem; color: var(--gold-text); margin-bottom: 15px; }
         .cover-page .to-line { font-family: 'Great Vibes', cursive; font-size: 2.2rem; margin-bottom: 5px; }
         .cover-page #guestNameDisplay { font-family: 'EB Garamond', serif; font-weight: 600; font-size: 1.5rem; color: var(--light-cream); letter-spacing: 1px; }
@@ -100,8 +114,24 @@
         .buddha-icon { margin-bottom: 15px; height: 50px; }
         .buddha-icon img { height: 100%; width: auto; animation: icon-glow 4s infinite ease-in-out; }
         @keyframes icon-glow { 0%, 100% { filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.5)); } 50% { filter: drop-shadow(0 0 14px rgba(255, 215, 0, 0.8)); } }
-        h1 { font-family: 'EB Garamond', serif; font-size: 2.8rem; font-weight: 600; margin: 15px 0 20px 0; color: var(--gold-text); letter-spacing: 1px;}
-        p { font-size: 1rem; line-height: 1.7; margin: 8px 0; padding: 0 5px; }
+        
+        /* Removed short golden line specific to 'Atta Deep Bhava' */
+        .main-invite .section-divider:first-of-type { display: none; }
+
+        .main-invite {
+            padding: 0; /* Let the main-content-wrapper handle padding */
+            margin: 0;
+        }
+        h1 { /* This is "Wedding Invitation" */
+            font-family: 'EB Garamond', serif; font-size: 2.8rem; font-weight: 600;
+            margin: 15px 0 20px 0; color: var(--gold-text); letter-spacing: 1px;
+            padding: 0; /* Resetting padding */
+        }
+        .main-invite p {
+            font-size: 1rem; line-height: 1.7; margin: 8px 0;
+            padding: 0; /* Resetting padding */
+            box-sizing: border-box;
+        }
         .couple-name { font-size: 4.5rem; margin: 15px 0; line-height: 1; color: var(--gold-text); transition: transform 0.3s ease, text-shadow 0.3s ease; }
         .couple-name:hover { transform: scale(1.03); text-shadow: 0 0 15px rgba(255, 215, 0, 0.5); }
         .couple-name .char { display: inline-block; opacity: 0; transform: translateY(-30px); animation: char-reveal 1s cubic-bezier(0.23, 1, 0.32, 1) forwards; }
@@ -110,8 +140,15 @@
             justify-content: center; align-items: center; flex-direction: column; line-height: 1.2; padding: 5px; box-sizing: border-box; color: var(--gold-text); transition: transform 0.3s ease; }
         .weds-separator:hover { transform: scale(1.1); }
         .weds-separator span { font-family: 'Great Vibes', cursive; font-size: 2rem; line-height: 1; }
-        .section-divider { width: 80%; margin: 50px 0; stroke: var(--gold-text); stroke-width: 1; stroke-dasharray: 1000; stroke-dashoffset: 1000; transition: stroke-dashoffset 2s ease-in-out; }
+        
+        .section-divider {
+            width: 80%; margin: 50px auto; /* Centered with auto margin */
+            stroke: var(--gold-text); stroke-width: 1; stroke-dasharray: 1000; stroke-dashoffset: 1000;
+            transition: stroke-dashoffset 2s ease-in-out;
+            max-width: 400px; /* Ensure dividers don't become too long on wide screens */
+        }
         .section-divider.visible { stroke-dashoffset: 0; }
+        
         .ceremonies-title { font-family: 'EB Garamond', serif; font-size: 2.8rem; font-weight: 600; margin: 0 0 30px 0; color: var(--gold-text); letter-spacing: 1px; }
         .event-section { margin-bottom: 35px; }
         .event-section:last-of-type { margin-bottom: 0; }
@@ -141,7 +178,6 @@
         <div class="texture-overlay"></div>
         
         <div class="cover-page">
-            
             <p class="to-line">To,</p>
             <h2 id="guestNameDisplay">Mr./Mrs. __________________</h2>
             <p class="with-family">with family</p>
@@ -150,11 +186,7 @@
             <h3 class="from-names">Fulzele Family</h3>
         </div>
 
-        <svg class="section-divider animate-on-scroll" width="200" height="20" viewBox="0 0 200 20">
-            <path d="M0 10 L80 10 L90 2 L110 18 L120 10 L200 10" stroke="gold" fill="none" stroke-width="1"/>
-        </svg>
-
-        <div class="main-invite">
+        <div class="main-content-wrapper">
             <p class="header-text">|| Atta Deep Bhava ||</p>
             <div class="buddha-icon"><img src="https://remove.photos/cache/images/users/29549d25-8d42-43a6-98db-0b5ba3fdaa43/general-optimized.png" alt="Buddha Icon"></div>
             <h1>Wedding Invitation</h1>
@@ -163,46 +195,46 @@
             <div class="weds-separator"><span class="script-font">Weds</span></div>
             <h2 class="script-font couple-name animate-chars">Seem</h2>
             <p>( D/o. Mrs. Reeta & Mr. Ashok Gourkhede )<br>Jagrut Nagar, Nagpur.</p>
-        </div>
 
-        <svg class="section-divider animate-on-scroll" width="200" height="20" viewBox="0 0 200 20">
-            <path d="M0 10 L80 10 L90 2 L110 18 L120 10 L200 10" fill="none"/>
-        </svg>
+            <svg class="section-divider animate-on-scroll" width="200" height="20" viewBox="0 0 200 20">
+                <path d="M0 10 L80 10 L90 2 L110 18 L120 10 L200 10" stroke="gold" fill="none" stroke-width="1"/>
+            </svg>
 
-        <div class="ceremonies-section animate-on-scroll">
-            <h1 class="ceremonies-title">Wedding Ceremonies</h1>
-            <div class="event-section">
-                <h2>Haldi Ceremony</h2>
-                <p><strong>On:</strong> Saturday, 01st November 2025 at 7.00 pm onwards</p>
-                <p><strong>At:</strong> R/o. Shankar Fulzele, Plot No. 947, New Indora, Jaripatka Road, Nagpur.</p>
+            <div class="ceremonies-section animate-on-scroll">
+                <h1 class="ceremonies-title">Wedding Ceremonies</h1>
+                <div class="event-section">
+                    <h2>Haldi Ceremony</h2>
+                    <p><strong>On:</strong> Saturday, 01st November 2025 at 7.00 pm onwards</p>
+                    <p><strong>At:</strong> R/o. Shankar Fulzele, Plot No. 947, New Indora, Jaripatka Road, Nagpur.</p>
+                </div>
+                <div class="event-section">
+                    <h2>Wedding Ceremony</h2>
+                    <p><strong>On:</strong> Sunday, 02nd November 2025 from 6.30 P.M. onwards</p>
+                    <p><strong>Venue:</strong></p>
+                    <h3 class="venue-name">" Gujjar Celebration "</h3>
+                    <p>Patankar Chowk, Near Powergrid Square, Nagpur.</p>
+                </div>
+                <div class="event-section">
+                    <h2>Reception Invitation</h2>
+                    <p><strong>On:</strong> Monday, 03rd November 2025 at 7.00 pm onwards</p>
+                    <p><strong>Venue:</strong> Ramai Sanskrutik Sabhagruh, Kapil Nagar Square, Opp. NIT Garden, Nagpur.</p>
+                </div>
             </div>
-            <div class="event-section">
-                <h2>Wedding Ceremony</h2>
-                <p><strong>On:</strong> Sunday, 02nd November 2025 from 6.30 P.M. onwards</p>
-                <p><strong>Venue:</strong></p>
-                <h3 class="venue-name">" Gujjar Celebration "</h3>
-                <p>Patankar Chowk, Near Powergrid Square, Nagpur.</p>
-            </div>
-            <div class="event-section">
-                <h2>Reception Invitation</h2>
-                <p><strong>On:</strong> Monday, 03rd November 2025 at 7.00 pm onwards</p>
-                <p><strong>Venue:</strong> Ramai Sanskrutik Sabhagruh, Kapil Nagar Square, Opp. NIT Garden, Nagpur.</p>
+
+            <svg class="section-divider animate-on-scroll" width="200" height="20" viewBox="0 0 200 20">
+                <path d="M0 10 L80 10 L90 2 L110 18 L120 10 L200 10" stroke="gold" fill="none" stroke-width="1"/>
+            </svg>
+            
+            <div class="compliments-section animate-on-scroll">
+                <p style="font-style: italic;">Your blessings will be the most valuable treasure that<br>we can cherish for years to come</p>
+                <div style="margin-top: 40px;">
+                    <p class="script-font">With Best Compliments From</p>
+                    <p>Mrs. Shweta & Mr. Kunal Meshram<br>Entire Fulzele Family<br>Relatives & Friends</p>
+                    <p class="no-after-please">No After Please</p>
+                </div>
             </div>
         </div>
-
-        <svg class="section-divider animate-on-scroll" width="200" height="20" viewBox="0 0 200 20">
-            <path d="M0 10 L80 10 L90 2 L110 18 L120 10 L200 10" fill="none"/>
-        </svg>
-        
-        <div class="compliments-section animate-on-scroll">
-            <p style="font-style: italic;">Your blessings will be the most valuable treasure that<br>we can cherish for years to come</p>
-            <div style="margin-top: 40px;">
-                <p class="script-font">With Best Compliments From</p>
-                <p>Mrs. Shweta & Mr. Kunal Meshram<br>Entire Fulzele Family<br>Relatives & Friends</p>
-                <p class="no-after-please">No After Please</p>
-            </div>
         </div>
-    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
