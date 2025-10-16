@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation | Rakshit & Seem</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oswald:wght@400;500;600&family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg-blue-dark: #0A3D62;
-            --bg-blue-light: #1E5F74;
+            --bg-blue-dark: #272872;   /* The requested Royal Blue */
+            --bg-blue-light: #3b3c8f;  /* A slightly lighter, complementary blue */
             --gold-text: #FFD700;
             --gold-subtle: #D4AF37;
             --light-cream: #F0EAD6;
@@ -25,199 +25,259 @@
             justify-content: center;
             align-items: center;
             margin: 0;
-            padding: 40px 20px;
+            padding: 20px;
             color: var(--light-cream);
-        }
-
-        /* The main container for the single page */
-        .invitation-card {
-            width: 100%;
-            max-width: 600px;
-            position: relative;
-            background: linear-gradient(135deg, var(--bg-blue-dark), var(--bg-blue-light), var(--bg-blue-dark));
-            background-size: 400% 400%;
-            animation: shimmer-background 18s ease infinite;
-            border-radius: 12px;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
-            padding: 50px 40px;
-            box-sizing: border-box;
-            text-align: center;
-            overflow: hidden; /* To keep border and overlay inside */
+            overflow-x: hidden;
         }
 
         @keyframes shimmer-background {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; }
         }
-        
-        /* Subtle noise overlay */
+
         .texture-overlay {
             position: absolute; top: 0; left: 0; right: 0; bottom: 0;
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzUEWAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD02ODZlNjI3NzQyYzYxZTgzYjEzNzcwYmRkMWYyZTkyYyI/Pgo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MCA2MS4xMzQ3NzcsIDIwMTAvMDEvMTAtMTg6MTY6NDUgICAgICAgICI+CjxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5orgovMTk5OS8wMi8yMi1yZGYtc2NoZW1hL25zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vYmFzZS8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20vYmFzZS8xLjAvc3RFdnQjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2dcL2VsZW1lbnRzXC8xLjFcLyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6N0U0NzMzNzIzNzIwNjgxMTg1REQzMzQzNTM5OTY2MTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzUzNzA0RjU1RDBFMTExMTk0QjdDQ0M2RkMxMUE4MjkiIHhtcE1NOkRlcml2ZWRGcm9tPSJ4bXAuZGlkOjc1MzcwNEYzNUQwRTExMTE5NEI3Q0NDNkZDMzFBODI5IiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgeG1wOkNyZWF0b3JDb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1Ij4KICAgPHN0UmVmOmluc3RhbmNlSUQ+eG1wLmlpZDpGNDlBNjFDQzRFMDQxMTEyQzIzMUE5QjcwMjczNUM3Rjwvc3RSZWY6aW5zdGFuY2VJRD4KICAgPHN0UmVmOmRvY3VtZW50SUQ+eG1wLmRpZDozOEZERjQxQzQ3RkUxMTEyQzIzMUE5QjcwMjczNUM3Rjwvc3RSZWY6ZG9jdW1lbnRJRD4KICAgPHN0UmVmOm9yaWdpbmFsRG9jdW1lbnRJRD54bXAuZGlkOjc1MzcwNEYzNUQwRTExMTE5NEI3Q0NDNkZDMzFBODI5PC9zdFJlZjppbnN0YW5jZUlEPgogICA8c3RFdnQ6YWN0aW9uPkNyZWF0ZWQ8L3N0RXZ0OmFjdGlvbj4KICAgPHN0RXZ0Omllc3RhbmNlSUQ+eG1wLmlpZDpGNDlBNjFDQjRFMDQxMTEyQzIzMUE5QjcwMjczNUM3Rjwvc3RFdnQ6aW5zdGFuY2VJRD4KICAgPHN0RXZ0OndoZW4+MjAxMi0wMy0wNFQxMjowNDowNCswMTowMDwvc3RFdnQ6d2hlbj4KICAgPHN0RXZ0OnNvZnR3YXJlPkFkb2JlIFBob3Rvc2hvcCBDUzUuMSBVbmljb2RlIFdpdGhzIEV4dGVuZGVkPC9zdEV2dDpzb2Z0d2FyZT4KICAgPC9yZGY6RGVzY3JpcHRpb24+CjwvcmRmOlJERj4KPC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9InciPz4MvF2fAAAAGklEQVR42mJgYGDgZGBgYGYAAgwMDAwMDAAAJgAEI0QvUugAAAAASUVORK5CYII=') repeat;
-            opacity: 0.2;
-            pointer-events: none;
+            opacity: 0.2; pointer-events: none;
         }
+        
+        /* Particles */
+        .particles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; }
+        .particle { position: absolute; background-color: var(--gold-text); border-radius: 50%; opacity: 0; animation: float 25s infinite ease-in-out; }
+        @keyframes float { 0% { transform: translateY(0); opacity: 0; } 10% { opacity: 0.7; } 90% { opacity: 0.7; } 100% { transform: translateY(-100vh); opacity: 0; } }
+        .particle:nth-child(1) { width: 3px; height: 3px; left: 10%; animation-delay: 1s; animation-duration: 20s; }
+        .particle:nth-child(2) { width: 2px; height: 2px; left: 25%; animation-delay: 5s; animation-duration: 30s; }
+        .particle:nth-child(3) { width: 4px; height: 4px; left: 40%; animation-delay: 10s; animation-duration: 18s; }
+        .particle:nth-child(4) { width: 2px; height: 2px; left: 55%; animation-delay: 15s; animation-duration: 25s; }
+        .particle:nth-child(5) { width: 3px; height: 3px; left: 75%; animation-delay: 8s; animation-duration: 22s; }
+        .particle:nth-child(6) { width: 2px; height: 2px; left: 90%; animation-delay: 18s; animation-duration: 35s; }
+        .particle:nth-child(7) { width: 3px; height: 3px; left: 5%; animation-delay: 22s; animation-duration: 28s; }
+        .particle:nth-child(8) { width: 4px; height: 4px; left: 95%; animation-delay: 3s; animation-duration: 19s; }
 
-        /* Gold border */
-        .invitation-card::before {
-            content: ''; position: absolute; top: 15px; left: 15px; right: 15px; bottom: 15px;
-            border: 2px solid var(--border-color);
-            border-radius: 8px; pointer-events: none;
+        /* --- Name Input Page --- */
+        #nameInputPage {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, var(--bg-blue-dark), var(--bg-blue-light)); z-index: 100;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            transition: opacity 0.8s ease-in-out; padding: 20px; box-sizing: border-box;
         }
-
+        #nameInputPage.hidden { opacity: 0; pointer-events: none; }
+        #nameInputPage h2 { font-family: 'Great Vibes', cursive; font-size: 3.5rem; color: var(--gold-text); margin-bottom: 30px; text-shadow: 0 0 10px rgba(255, 215, 0, 0.4); }
+        #nameInput { background: rgba(255, 255, 255, 0.1); border: 1px solid var(--gold-text); border-radius: 8px; padding: 12px 20px;
+            color: var(--light-cream); font-size: 1.2rem; width: 80%; max-width: 300px; text-align: center; margin-bottom: 25px; transition: all 0.3s ease; }
+        #nameInput:focus { outline: none; box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); background: rgba(255, 255, 255, 0.15); }
+        .enter-button { background-color: transparent; border: 2px solid var(--gold-text); color: var(--gold-text); padding: 12px 35px;
+            font-family: 'EB Garamond', serif; font-size: 1.2rem; border-radius: 30px; cursor: pointer; transition: all 0.4s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3); letter-spacing: 1px; font-weight: 600; }
+        .enter-button:hover { background-color: var(--gold-text); color: var(--bg-blue-dark); box-shadow: 0 8px 25px rgba(0,0,0,0.4); transform: translateY(-2px); }
+        
+        /* --- Main Invitation Card --- */
+        .invitation-card {
+            width: 100%; max-width: 620px; position: relative;
+            background: linear-gradient(135deg, var(--bg-blue-dark), var(--bg-blue-light), var(--bg-blue-dark)); background-size: 400% 400%;
+            animation: shimmer-background 18s ease infinite; border-radius: 12px; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+            padding: 40px; box-sizing: border-box; text-align: center; overflow: hidden;
+            opacity: 0; pointer-events: none;
+            max-height: calc(100vh - 40px); overflow-y: auto;
+            scrollbar-width: thin; scrollbar-color: var(--gold-text) var(--bg-blue-dark);
+        }
+        .invitation-card.visible { opacity: 1; pointer-events: auto; animation: card-enter 1s 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; }
+        @keyframes card-enter { to { opacity: 1; transform: scale(1); } }
+        .invitation-card::-webkit-scrollbar { width: 8px; }
+        .invitation-card::-webkit-scrollbar-track { background: var(--bg-blue-dark); border-radius: 10px; }
+        .invitation-card::-webkit-scrollbar-thumb { background-color: var(--gold-text); border-radius: 10px; border: 2px solid var(--bg-blue-dark); }
+        .invitation-card::before { content: ''; position: absolute; top: 15px; left: 15px; right: 15px; bottom: 15px; border: 2px solid var(--border-color); border-radius: 8px; pointer-events: none; }
+        
+        /* --- Cover Page Section --- */
+        .cover-page { padding-bottom: 50px; }
+        .cover-page .top-left-emblem { font-family: 'Great Vibes', cursive; font-size: 4rem; color: var(--gold-text); margin-bottom: 20px; }
+        .cover-page .to-line { font-family: 'Great Vibes', cursive; font-size: 2.5rem; margin-bottom: 5px; }
+        .cover-page #guestNameDisplay { font-family: 'EB Garamond', serif; font-weight: 600; font-size: 1.8rem; color: var(--light-cream); letter-spacing: 1px; }
+        .cover-page .with-family { font-size: 1.2rem; font-style: italic; margin-top: 5px; opacity: 0.9; }
+        .cover-page .token-of-love { font-size: 1.2rem; margin: 30px 0; font-style: italic; }
+        .cover-page .from-line { font-size: 1.2rem; margin-top: 30px; }
+        .cover-page .from-names { font-family: 'Great Vibes', cursive; font-size: 2.8rem; margin: 5px 0 0 0; color: var(--gold-text); }
+        
+        /* --- Details Sections & General Styling --- */
         .script-font { font-family: 'Great Vibes', cursive; font-weight: normal; }
         .header-text { font-size: 1.2rem; letter-spacing: 2px; margin-bottom: 8px; color: var(--gold-text); }
-        .buddha-icon { font-size: 3rem; color: var(--gold-text); margin-bottom: 15px; }
+        .buddha-icon { margin-bottom: 15px; height: 60px; }
+        .buddha-icon img { height: 100%; width: auto; animation: icon-glow 4s infinite ease-in-out; }
+        @keyframes icon-glow { 0%, 100% { filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5)); } 50% { filter: drop-shadow(0 0 16px rgba(255, 215, 0, 0.8)); } }
         h1 { font-family: 'EB Garamond', serif; font-size: 3.2rem; font-weight: 600; margin: 15px 0 20px 0; color: var(--gold-text); letter-spacing: 1px;}
         p { font-size: 1.15rem; line-height: 1.8; margin: 10px 0; padding: 0 10px; }
-        .couple-name { font-size: 5.8rem; margin: 15px 0; line-height: 1; color: var(--gold-text); }
+        .couple-name { font-size: 5.8rem; margin: 15px 0; line-height: 1; color: var(--gold-text); transition: transform 0.3s ease, text-shadow 0.3s ease; }
+        .couple-name:hover { transform: scale(1.03); text-shadow: 0 0 15px rgba(255, 215, 0, 0.5); }
+        .couple-name .char { display: inline-block; opacity: 0; transform: translateY(-30px); animation: char-reveal 1s cubic-bezier(0.23, 1, 0.32, 1) forwards; }
+        @keyframes char-reveal { to { opacity: 1; transform: translateY(0); } }
         .weds-separator { font-size: 1.2rem; margin: 20px auto; border: 1px solid var(--gold-text); border-radius: 50%; width: 90px; height: 90px; display: flex;
-            justify-content: center; align-items: center; flex-direction: column; line-height: 1.2; padding: 5px; box-sizing: border-box; color: var(--gold-text); }
+            justify-content: center; align-items: center; flex-direction: column; line-height: 1.2; padding: 5px; box-sizing: border-box; color: var(--gold-text); transition: transform 0.3s ease; }
+        .weds-separator:hover { transform: scale(1.1); }
         .weds-separator span { font-family: 'Great Vibes', cursive; font-size: 2.2rem; line-height: 1; }
-
-        .section-divider {
-            border: none;
-            height: 1px;
-            background: linear-gradient(to right, transparent, rgba(255, 215, 0, 0.4), transparent);
-            margin: 50px 0;
-        }
+        .section-divider { width: 80%; margin: 60px 0; stroke: var(--gold-text); stroke-width: 1; stroke-dasharray: 1000; stroke-dashoffset: 1000; transition: stroke-dashoffset 2s ease-in-out; }
+        .section-divider.visible { stroke-dashoffset: 0; }
+        .ceremonies-title { font-family: 'EB Garamond', serif; font-size: 3.2rem; font-weight: 600; margin: 0 0 40px 0; color: var(--gold-text); letter-spacing: 1px; }
+        .event-section { margin-bottom: 40px; }
+        .event-section:last-of-type { margin-bottom: 0; }
+        .event-section h2 { font-family: 'Great Vibes', cursive; font-size: 3.2rem; margin: 0 0 15px 0; font-weight: normal; color: var(--gold-text); }
+        .event-section p { font-size: 1.1rem; line-height: 1.7; margin: 8px 0; padding: 0; }
+        .event-section strong { color: var(--light-cream); font-weight: 500; }
+        .venue-name { font-family: 'Great Vibes', cursive; font-size: 2.5rem; margin: 10px 0; line-height: 1.2; color: var(--gold-text); }
+        .compliments-section { margin-top: 50px; }
+        .compliments-section .script-font { font-size: 2.2rem; margin-bottom: 15px; color: var(--gold-text); }
+        .no-after-please { font-weight: 700; font-size: 1.1rem; margin-top: 25px; padding: 8px 15px; border: 1px solid var(--gold-text); display: inline-block; color: var(--gold-text); letter-spacing: 0.5px; }
         
-        .ceremonies-title {
-            font-family: 'EB Garamond', serif;
-            font-size: 3.2rem;
-            font-weight: 600;
-            margin: 0 0 40px 0;
-            color: var(--gold-text);
-            letter-spacing: 1px;
-        }
-        
-        .event-section {
-            margin-bottom: 40px;
-        }
-        .event-section:last-of-type {
-            margin-bottom: 0;
-        }
-        
-        .event-section h2 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 3.2rem;
-            margin: 0 0 15px 0;
-            font-weight: normal;
-            color: var(--gold-text);
-        }
-        .event-section p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin: 8px 0;
-            padding: 0;
-        }
-        .event-section strong {
-            color: var(--light-cream);
-            font-weight: 500;
-        }
-        
-        .venue-name {
-            font-family: 'Great Vibes', cursive;
-            font-size: 2.5rem;
-            margin: 10px 0;
-            line-height: 1.2;
-            color: var(--gold-text);
-        }
-        
-        .compliments-section {
-            margin-top: 50px;
-        }
-        .compliments-section .script-font {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-            color: var(--gold-text);
-        }
-        .no-after-please {
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-top: 25px;
-            padding: 8px 15px;
-            border: 1px solid var(--gold-text);
-            display: inline-block;
-            color: var(--gold-text);
-            letter-spacing: 0.5px;
-        }
+        /* Scroll & Char Animations */
+        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
         
         @media (max-width: 650px) {
-            body { padding: 20px 10px; }
-            .invitation-card { padding: 40px 25px; }
-            h1, .ceremonies-title { font-size: 2.8rem; }
-            p { font-size: 1rem; }
-            .couple-name { font-size: 4.5rem; }
-            .event-section h2 { font-size: 2.8rem; }
+            body { padding: 20px 10px; } .invitation-card { padding: 40px 20px; max-height: calc(100vh - 20px); }
+            h1, .ceremonies-title { font-size: 2.8rem; } p { font-size: 1rem; } .couple-name { font-size: 4.5rem; } .event-section h2 { font-size: 2.8rem; }
         }
         @media (max-width: 480px) {
-            h1, .ceremonies-title { font-size: 2.2rem; }
-            .couple-name { font-size: 3.5rem; }
-            .event-section h2 { font-size: 2.2rem; }
+            h1, .ceremonies-title { font-size: 2.2rem; } .couple-name { font-size: 3.5rem; } .event-section h2 { font-size: 2.2rem; }
+            #nameInputPage h2 { font-size: 2.8rem; }
         }
-
     </style>
 </head>
 <body>
 
-    <div class="invitation-card">
+    <div id="nameInputPage">
+        <div class="particles">
+            <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+            <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        </div>
+        <h2>Kindly enter your name</h2>
+        <input type="text" id="nameInput" placeholder="Your name here...">
+        <button id="submitNameBtn" class="enter-button">Enter</button>
+    </div>
+
+    <div class="invitation-card" id="mainCard">
+        <div class="particles">
+            <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+            <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        </div>
         <div class="texture-overlay"></div>
         
-        <p class="header-text">|| Atta Deep Bhava ||</p>
-        <div class="buddha-icon">🧘‍♂️</div>
-        <h1>Wedding Invitation</h1>
-        <p>With Blessings of<br>
-        Late Mr. Shankar Fulzele<br>
-        Mrs. Asha & Mr. Ashok Fulzele<br>
-        Take great pleasure in inviting you to bless the<br>
-        Wedding of their beloved son.</p>
-        
-        <h2 class="script-font couple-name">Rakshit</h2>
-        <div class="weds-separator"><span class="script-font">Weds</span></div>
-        <h2 class="script-font couple-name">Seem</h2>
-        
-        <p>( D/o. Mrs. Reeta & Mr. Ashok Gourkhede )<br>
-        Jagrut Nagar, Nagpur.</p>
-
-        <hr class="section-divider">
-
-        <h1 class="ceremonies-title">Wedding Ceremonies</h1>
-        
-        <div class="event-section">
-            <h2>Haldi Ceremony</h2>
-            <p><strong>On:</strong> Saturday, 01st November 2025 at 7.00 pm onwards</p>
-            <p><strong>At:</strong> R/o. Shankar Fulzele, Plot No. 947, New Indora, Jaripatka Road, Nagpur.</p>
+        <div class="cover-page">
+            
+            <p class="to-line">To,</p>
+            <h2 id="guestNameDisplay">Mr./Mrs. __________________</h2>
+            <p class="with-family">with family</p>
+            <p class="token-of-love">A token of love and appreciation</p>
+            <p class="from-line">From,</p>
+            <h3 class="from-names">Fulzele Family</h3>
         </div>
 
-        <div class="event-section">
-            <h2>Wedding Ceremony</h2>
-            <p><strong>On:</strong> Sunday, 02nd November 2025 from 6.30 P.M. onwards</p>
-            <p><strong>Venue:</strong></p>
-            <h3 class="venue-name">" Gujjar Celebration "</h3>
-            <p>Patankar Chowk, Near Powergrid Square, Nagpur.</p>
+        <svg class="section-divider animate-on-scroll" width="200" height="20" viewBox="0 0 200 20">
+            <path d="M0 10 L80 10 L90 2 L110 18 L120 10 L200 10" stroke="gold" fill="none" stroke-width="1"/>
+        </svg>
+
+        <div class="main-invite">
+            <p class="header-text">|| Atta Deep Bhava ||</p>
+            <div class="buddha-icon"><img src="https://remove.photos/cache/images/users/29549d25-8d42-43a6-98db-0b5ba3fdaa43/general-optimized.png" alt="Buddha Icon"></div>
+            <h1>Wedding Invitation</h1>
+            <p>With Blessings of<br>Late Mr. Shankar Fulzele<br>Mrs. Asha & Mr. Ashok Fulzele<br>Take great pleasure in inviting you to bless the<br>Wedding of their beloved son.</p>
+            <h2 class="script-font couple-name animate-chars">Rakshit</h2>
+            <div class="weds-separator"><span class="script-font">Weds</span></div>
+            <h2 class="script-font couple-name animate-chars">Seem</h2>
+            <p>( D/o. Mrs. Reeta & Mr. Ashok Gourkhede )<br>Jagrut Nagar, Nagpur.</p>
         </div>
+
+        <svg class="section-divider animate-on-scroll" width="200" height="20" viewBox="0 0 200 20">
+            <path d="M0 10 L80 10 L90 2 L110 18 L120 10 L200 10" fill="none"/>
+        </svg>
+
+        <div class="ceremonies-section animate-on-scroll">
+            <h1 class="ceremonies-title">Wedding Ceremonies</h1>
+            <div class="event-section">
+                <h2>Haldi Ceremony</h2>
+                <p><strong>On:</strong> Saturday, 01st November 2025 at 7.00 pm onwards</p>
+                <p><strong>At:</strong> R/o. Shankar Fulzele, Plot No. 947, New Indora, Jaripatka Road, Nagpur.</p>
+            </div>
+            <div class="event-section">
+                <h2>Wedding Ceremony</h2>
+                <p><strong>On:</strong> Sunday, 02nd November 2025 from 6.30 P.M. onwards</p>
+                <p><strong>Venue:</strong></p>
+                <h3 class="venue-name">" Gujjar Celebration "</h3>
+                <p>Patankar Chowk, Near Powergrid Square, Nagpur.</p>
+            </div>
+            <div class="event-section">
+                <h2>Reception Invitation</h2>
+                <p><strong>On:</strong> Monday, 03rd November 2025 at 7.00 pm onwards</p>
+                <p><strong>Venue:</strong> Ramai Sanskrutik Sabhagruh, Kapil Nagar Square, Opp. NIT Garden, Nagpur.</p>
+            </div>
+        </div>
+
+        <svg class="section-divider animate-on-scroll" width="200" height="20" viewBox="0 0 200 20">
+            <path d="M0 10 L80 10 L90 2 L110 18 L120 10 L200 10" fill="none"/>
+        </svg>
         
-        <div class="event-section">
-            <h2>Reception Invitation</h2>
-            <p><strong>On:</strong> Monday, 03rd November 2025 at 7.00 pm onwards</p>
-            <p><strong>Venue:</strong> Ramai Sanskrutik Sabhagruh, Kapil Nagar Square, Opp. NIT Garden, Nagpur.</p>
+        <div class="compliments-section animate-on-scroll">
+            <p style="font-style: italic;">Your blessings will be the most valuable treasure that<br>we can cherish for years to come</p>
+            <div style="margin-top: 40px;">
+                <p class="script-font">With Best Compliments From</p>
+                <p>Mrs. Shweta & Mr. Kunal Meshram<br>Entire Fulzele Family<br>Relatives & Friends</p>
+                <p class="no-after-please">No After Please</p>
+            </div>
         </div>
-
-        <hr class="section-divider">
-        
-        <p style="font-style: italic;">Your blessings will be the most valuable treasure that<br>we can cherish for years to come</p>
-
-        <div class="compliments-section">
-            <p class="script-font">With Best Compliments From</p>
-            <p>Mrs. Shweta & Mr. Kunal Meshram<br>
-            Entire Fulzele Family<br>
-            Relatives & Friends</p>
-            <p class="no-after-please">No After Please</p>
-        </div>
-
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const nameInputPage = document.getElementById('nameInputPage');
+            const submitNameBtn = document.getElementById('submitNameBtn');
+            const nameInput = document.getElementById('nameInput');
+            const mainCard = document.getElementById('mainCard');
+            const guestNameDisplay = document.getElementById('guestNameDisplay');
+
+            const proceedToInvitation = () => {
+                const guestName = nameInput.value.trim();
+                if (guestName) {
+                    guestNameDisplay.textContent = guestName;
+                } else {
+                    guestNameDisplay.textContent = "Our Respected Guest"; // Fallback name
+                }
+
+                nameInputPage.classList.add('hidden');
+                mainCard.classList.add('visible');
+
+                // Trigger animations only after the card is visible
+                setTimeout(() => {
+                    // Scroll Animation Observer
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                            }
+                        });
+                    }, { threshold: 0.2, root: mainCard }); // Observe inside the card
+                    document.querySelectorAll('.animate-on-scroll').forEach((el) => observer.observe(el));
+
+                    // Text Reveal Animation
+                    const elements = document.querySelectorAll('.animate-chars');
+                    elements.forEach(el => {
+                        const text = el.textContent;
+                        el.innerHTML = '';
+                        for (let i = 0; i < text.length; i++) {
+                            const charSpan = document.createElement('span');
+                            charSpan.className = 'char';
+                            charSpan.textContent = text[i] === ' ' ? '\u00A0' : text[i];
+                            charSpan.style.animationDelay = `${i * 0.05 + 0.5}s`;
+                            el.appendChild(charSpan);
+                        }
+                    });
+                }, 500); // Delay to match card entrance animation
+            };
+            
+            submitNameBtn.addEventListener('click', proceedToInvitation);
+            nameInput.addEventListener('keypress', (event) => {
+                if (event.key === 'Enter') {
+                    proceedToInvitation();
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
