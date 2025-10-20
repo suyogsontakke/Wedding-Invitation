@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation | Rakshit & Seem</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oswald:wght@400;500;600&family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="https://i.ibb.co/0pK98pHR/Picsart-25-10-17-17-47-15-504.png">
     <link rel="apple-touch-icon" href="https://i.ibb.co/0pK98pHR/Picsart-25-10-17-17-47-15-504.png">
@@ -134,6 +134,27 @@
             padding: 0; /* Resetting padding */
             box-sizing: border-box;
         }
+
+        /* START: CSS for Couple Photo Added */
+        .couple-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%; /* Makes it circular */
+            /* IMPORTANT: Replace this URL with your couple's photo */
+            background-image: url('https://i.ibb.co/9mPNrg5x/image.png'); 
+            background-size: cover;
+            background-position: center;
+            margin: 30px auto 25px; /* Adds space above and below */
+            border: 3px solid var(--gold-text);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+            transition: transform 0.5s ease;
+        }
+
+        .couple-photo:hover {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+        /* END: CSS for Couple Photo Added */
+
         .couple-name { font-size: 4.5rem; margin: 15px 0; line-height: 1; color: var(--gold-text); transition: transform 0.3s ease, text-shadow 0.3s ease; }
         .couple-name:hover { transform: scale(1.03); text-shadow: 0 0 15px rgba(255, 215, 0, 0.5); }
         .couple-name .char { display: inline-block; opacity: 0; transform: translateY(-30px); animation: char-reveal 1s cubic-bezier(0.23, 1, 0.32, 1) forwards; }
@@ -193,6 +214,8 @@
             <div class="buddha-icon"><img src="https://i.ibb.co/0pK98pHR/Picsart-25-10-17-17-47-15-504.png" alt="Buddha Icon"></div>
             <h1>Wedding Invitation</h1>
             <p>With Blessings of<br>Late Mr. Shankar Fulzele<br>Mrs. Asha & Mr. Ashok Fulzele<br>Take great pleasure in inviting you to bless the<br>Wedding of their beloved son.</p>
+            
+            <div class="couple-photo animate-on-scroll"></div>
             <h2 class="script-font couple-name animate-chars">Rakshit</h2>
             <div class="weds-separator"><span class="script-font">Weds</span></div>
             <h2 class="script-font couple-name animate-chars">Seem</h2>
