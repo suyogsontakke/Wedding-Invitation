@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Invitation | Rakshit & Seem</title>
+    <title>Wedding Invitation | Virat & Anushka</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oswald:wght@400;500;600&family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,9 +18,9 @@
             --gold-subtle: #D4AF37;
             --light-cream: #F0EAD6;
             --border-color: rgba(255, 215, 0, 0.4);
-            --primary-border-thickness: 2px; /* Increased border thickness for prominence */
+            --primary-border-thickness: 2px;
             --primary-border-radius: 12px;
-            --inner-padding: 30px; /* Consistent inner padding */
+            --inner-padding: 30px;
         }
 
         body {
@@ -31,7 +31,7 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding: 15px; /* Optimized padding for mobile */
+            padding: 15px;
             color: var(--light-cream);
             overflow-x: hidden;
             box-sizing: border-box;
@@ -79,7 +79,7 @@
             width: 100%; max-width: 620px; position: relative;
             background: linear-gradient(135deg, var(--bg-blue-dark), var(--bg-blue-light), var(--bg-blue-dark)); background-size: 400% 400%;
             animation: shimmer-background 18s ease infinite; border-radius: var(--primary-border-radius); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
-            padding: var(--inner-padding) 20px; /* Base padding for the card */
+            padding: var(--inner-padding) 20px;
             box-sizing: border-box; text-align: center; overflow: hidden;
             opacity: 0; pointer-events: none;
             max-height: calc(100vh - 40px); overflow-y: auto;
@@ -89,19 +89,17 @@
         .invitation-card.visible { opacity: 1; pointer-events: auto; animation: card-enter 1s 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; }
         @keyframes card-enter { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
         
-        /* New internal border around the main content area */
         .main-content-wrapper {
             position: relative;
-            margin-top: 30px; /* Space from 'Fulzele Family' */
-            padding: 20px; /* Internal padding for content within the border */
+            margin-top: 30px;
+            padding: 20px;
             border: var(--primary-border-thickness) solid var(--border-color);
             border-radius: var(--primary-border-radius);
             box-sizing: border-box;
-            background: rgba(0,0,0,0.05); /* Slight internal background for contrast */
+            background: rgba(0,0,0,0.05);
         }
         
-        /* Cover Page Styles */
-        .cover-page { padding-bottom: 20px; } /* Reduced padding as main-content-wrapper will have its own */
+        .cover-page { padding-bottom: 20px; }
         .cover-page .top-left-emblem { font-family: 'Great Vibes', cursive; font-size: 3.5rem; color: var(--gold-text); margin-bottom: 15px; }
         .cover-page .to-line { font-family: 'Great Vibes', cursive; font-size: 2.2rem; margin-bottom: 5px; }
         .cover-page #guestNameDisplay { font-family: 'EB Garamond', serif; font-weight: 600; font-size: 1.5rem; color: var(--light-cream); letter-spacing: 1px; }
@@ -110,50 +108,34 @@
         .cover-page .from-line { font-size: 1.1rem; margin-top: 25px; }
         .cover-page .from-names { font-family: 'Great Vibes', cursive; font-size: 2.5rem; margin: 5px 0 0 0; color: var(--gold-text); }
         
-        /* General & Details Styles */
         .script-font { font-family: 'Great Vibes', cursive; font-weight: normal; }
         .header-text { font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 8px; color: var(--gold-text); }
         .buddha-icon { margin-bottom: 15px; height: 50px; }
         .buddha-icon img { height: 100%; width: auto; animation: icon-glow 4s infinite ease-in-out; }
         @keyframes icon-glow { 0%, 100% { filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.5)); } 50% { filter: drop-shadow(0 0 14px rgba(255, 215, 0, 0.8)); } }
         
-        /* Removed short golden line specific to 'Atta Deep Bhava' */
         .main-invite .section-divider:first-of-type { display: none; }
 
-        .main-invite {
-            padding: 0; /* Let the main-content-wrapper handle padding */
-            margin: 0;
-        }
-        h1 { /* This is "Wedding Invitation" */
-            font-family: 'EB Garamond', serif; font-size: 2.8rem; font-weight: 600;
-            margin: 15px 0 20px 0; color: var(--gold-text); letter-spacing: 1px;
-            padding: 0; /* Resetting padding */
-        }
-        .main-invite p {
-            font-size: 1rem; line-height: 1.7; margin: 8px 0;
-            padding: 0; /* Resetting padding */
-            box-sizing: border-box;
-        }
+        .main-invite { padding: 0; margin: 0; }
+        h1 { font-family: 'EB Garamond', serif; font-size: 2.8rem; font-weight: 600; margin: 15px 0 20px 0; color: var(--gold-text); letter-spacing: 1px; padding: 0; }
+        .main-invite p { font-size: 1rem; line-height: 1.7; margin: 8px 0; padding: 0; box-sizing: border-box; }
 
-        /* START: CSS for Couple Photo Added */
+        /* Couple Photo Style */
         .couple-photo {
             width: 180px;
             height: 180px;
-            border-radius: 50%; /* Makes it circular */
-            /* IMPORTANT: Replace this URL with your couple's photo */
-            background-image: url('https://i.ibb.co/9mPNrg5x/image.png'); 
+            border-radius: 50%;
+            /* Placeholder Image - REPLACE THE URL BELOW with a real photo of Virat and Anushka */
+            background-image: url('https://akm-img-a-in.tosshub.com/indiatoday/virushka-ring-story_647_121317030803.jpg?VersionId=Savcyh8z1kZBEZEXKJ4d92xObOTkZBQ0&size=690:388'); 
             background-size: cover;
-            background-position: center;
-            margin: 30px auto 25px; /* Adds space above and below */
+            background-position: top center;
+            margin: 30px auto 25px;
             border: 3px solid var(--gold-text);
             box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
             transition: transform 0.5s ease;
         }
 
-        .couple-photo:hover {
-            transform: scale(1.05); /* Slight zoom effect on hover */
-        }
-        /* END: CSS for Couple Photo Added */
+        .couple-photo:hover { transform: scale(1.05); }
 
         .couple-name { font-size: 4.5rem; margin: 15px 0; line-height: 1; color: var(--gold-text); transition: transform 0.3s ease, text-shadow 0.3s ease; }
         .couple-name:hover { transform: scale(1.03); text-shadow: 0 0 15px rgba(255, 215, 0, 0.5); }
@@ -165,10 +147,10 @@
         .weds-separator span { font-family: 'Great Vibes', cursive; font-size: 2rem; line-height: 1; }
         
         .section-divider {
-            width: 80%; margin: 50px auto; /* Centered with auto margin */
+            width: 80%; margin: 50px auto;
             stroke: var(--gold-text); stroke-width: 1; stroke-dasharray: 1000; stroke-dashoffset: 1000;
             transition: stroke-dashoffset 2s ease-in-out;
-            max-width: 400px; /* Ensure dividers don't become too long on wide screens */
+            max-width: 400px;
         }
         .section-divider.visible { stroke-dashoffset: 0; }
         
@@ -206,20 +188,20 @@
             <p class="with-family">with family</p>
             <p class="token-of-love">A token of love and appreciation</p>
             <p class="from-line">From,</p>
-            <h3 class="from-names">Fulzele Family</h3>
+            <h3 class="from-names">Kohli & Sharma Families</h3>
         </div>
 
         <div class="main-content-wrapper">
             <p class="header-text">|| Atta Deep Bhava ||</p>
-            <div class="buddha-icon"><img src="https://i.ibb.co/0pK98pHR/Picsart-25-10-17-17-47-15-504.png" alt="Buddha Icon"></div>
+            <div class="buddha-icon"><img src="https://i.ibb.co/0pK98pHR/Picsart-25-10-17-17-47-15-504.png" alt="Icon"></div>
             <h1>Wedding Invitation</h1>
-            <p>With Blessings of<br>Late Mr. Shankar Fulzele<br>Mrs. Asha & Mr. Ashok Fulzele<br>Take great pleasure in inviting you to bless the<br>Wedding of their beloved son.</p>
+            <p>With Blessings of Parents<br><strong>Mrs. Saroj & Late Mr. Prem Kohli</strong><br>Take great pleasure in inviting you to bless the<br>Wedding of their beloved son</p>
             
             <div class="couple-photo animate-on-scroll"></div>
-            <h2 class="script-font couple-name animate-chars">Rakshit</h2>
+            <h2 class="script-font couple-name animate-chars">Virat</h2>
             <div class="weds-separator"><span class="script-font">Weds</span></div>
-            <h2 class="script-font couple-name animate-chars">Seem</h2>
-            <p>( D/o. Mrs. Reeta & Mr. Ashok Gourkhede )<br>Jagrut Nagar, Nagpur.</p>
+            <h2 class="script-font couple-name animate-chars">Anushka</h2>
+            <p>( D/o. Mrs. Ashima & Mr. Ajay Kumar Sharma )<br>Mumbai, Maharashtra.</p>
 
             <svg class="section-divider animate-on-scroll" width="200" height="20" viewBox="0 0 200 20">
                 <path d="M0 10 L80 10 L90 2 L110 18 L120 10 L200 10" stroke="gold" fill="none" stroke-width="1"/>
@@ -229,20 +211,21 @@
                 <h1 class="ceremonies-title">Wedding Ceremonies</h1>
                 <div class="event-section">
                     <h2>Haldi Ceremony</h2>
-                    <p><strong>On:</strong> Saturday, 01st November 2025 at 7.00 pm onwards</p>
-                    <p><strong>At:</strong> R/o. Shankar Fulzele, Plot No. 947, New Indora, Jaripatka Road, Nagpur.</p>
+                    <p><strong>On:</strong> Thursday, 10th December 2026 at 11:00 AM onwards</p>
+                    <p><strong>Venue:</strong> The Oberoi, Nariman Point, Mumbai.</p>
                 </div>
                 <div class="event-section">
                     <h2>Wedding Ceremony</h2>
-                    <p><strong>On:</strong> Sunday, 02nd November 2025 from 6.30 P.M. onwards</p>
+                    <p><strong>On:</strong> Friday, 11th December 2026</p>
+                    <p><strong>Baarat:</strong> 7:00 PM | <strong>Hastamioap:</strong> 8:30 PM</p>
                     <p><strong>Venue:</strong></p>
-                    <h3 class="venue-name">" Gujjar Celebration "</h3>
-                    <p>Patankar Chowk, Near Powergrid Square, Nagpur.</p>
+                    <h3 class="venue-name">" The Taj Mahal Palace "</h3>
+                    <p>Apollo Bunder, Mumbai, Maharashtra.</p>
                 </div>
                 <div class="event-section">
-                    <h2>Reception Invitation</h2>
-                    <p><strong>On:</strong> Monday, 03rd November 2025 at 7.00 pm onwards</p>
-                    <p><strong>Venue:</strong> Ramai Sanskrutik Sabhagruh, Kapil Nagar Square, Opp. NIT Garden, Nagpur.</p>
+                    <h2>Reception</h2>
+                    <p><strong>On:</strong> Saturday, 12th December 2026 at 7.30 PM onwards</p>
+                    <p><strong>Venue:</strong> The St. Regis, Lower Parel, Mumbai.</p>
                 </div>
             </div>
 
@@ -251,15 +234,15 @@
             </svg>
             
             <div class="compliments-section animate-on-scroll">
-                <p style="font-style: italic;">Your blessings will be the most valuable treasure that<br>we can cherish for years to come</p>
+                <p style="font-style: italic;">Your presence is the greatest gift of all,<br>but your blessings are what we cherish most.</p>
                 <div style="margin-top: 40px;">
                     <p class="script-font">With Best Compliments From</p>
-                    <p>Mrs. Shweta & Mr. Kunal Meshram<br>Entire Fulzele Family<br>Relatives & Friends</p>
-                    <p class="no-after-please">No Aaher Please</p>
+                    <p>Vikas Kohli & Karnesh Sharma<br>Kohli & Sharma Families<br>Friends & Relatives</p>
+                    <p class="no-after-please">No Gifts Please</p>
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
