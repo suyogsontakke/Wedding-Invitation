@@ -1,6 +1,6 @@
 <div align="center">
   <!-- Use your icon URL -->
-  <img src="https://i.ibb.co/0pK98pHR/Picsart-25-10-17-17-47-15-504.png" alt="Invitation Emblem" width="120" />
+  <img src="https://i.postimg.cc/MTM0vQRF/image.png" alt="Invitation Emblem" width="120" />
   <h1>Digital Wedding Invitation</h1>
   <p>
     A beautiful, animated, and personalized single-page web invitation for the wedding of Rakshit & Seem.
@@ -16,12 +16,12 @@
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs welcome"/>
   </p>
   
-  <strong>Live Demo: <a href="https://rakshit-weds-seem.vercel.app/">WEBSITE</a></strong>
+  <strong>Live Demo: <a href="https://virat-weds-anushka.vercel.app/">WEBSITE</a></strong>
 </div>
 
 <!-- Add a high-quality screenshot of your invitation -->
 <div align="center">
-  <img src="https://i.postimg.cc/CLJrG7F9/image.png" alt="Wedding Invitation Screenshot">
+  <img src="https://i.postimg.cc/ncwWWvkW/image.png" alt="Wedding Invitation Screenshot">
 </div>
 
 ---
